@@ -1,0 +1,145 @@
+/* Estilo del contenedor de la tabla */
+.datatable-container {
+    margin-top: 30px; /* Espacio entre el título y la tabla */
+    padding: 10px;
+}
+
+/* Título */
+h2.table-title {
+    font-size: 30px; /* Tamaño de fuente más grande para el título */
+    font-weight: 600;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #3f51b5; /* Color principal para el título */
+    padding: 15px; /* Añadir algo de espacio alrededor del texto */
+    border-radius: 12px; /* Bordes redondeados como la tabla */
+    background: linear-gradient(145deg, #3f51b5, #2c387e); /* Degradado en el fondo */
+    color: white; /* Color blanco para el texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Transición suave al hacer hover */
+}
+
+/* Efecto hover en el título */
+h2.table-title:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del título al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+    cursor: pointer;
+}
+
+/* Resaltar parte del título (en tu caso 'Basic Datatable') */
+h2.table-title span {
+    color: #ffeb3b; /* Resaltar en un color dorado */
+    font-weight: bold; /* Hacerlo en negrita */
+}
+
+/* Estilos generales para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #f4f6f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Encabezados de la tabla */
+th {
+    background-color: #3f51b5;
+    color: #ffffff;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffffff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Filas alternas con color suave */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efecto hover sobre las filas */
+tbody tr:hover {
+    background-color: #e8eaf6;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Celdas con bordes redondeados */
+td,
+th {
+    border-radius: 8px;
+}
+
+/* Sombra sutil en la tabla */
+table.datatable.hover tbody tr:hover {
+    background-color: #e8eaf6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la tabla cuando está cargando */
+table.datatable {
+    display: block;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+/* Estilo para la primera columna (ID) */
+td:first-child,
+th:first-child {
+    font-weight: bold;
+    color: #3f51b5;
+}
+
+/* Última fila sin borde inferior */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Efecto para las celdas cuando se pasa el cursor */
+td:hover,
+th:hover {
+    background-color: #c5cae9;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Alineación y estilo de las celdas */
+td,
+th {
+    padding: 14px 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Diseño de borde para las filas */
+tbody tr {
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}

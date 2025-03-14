@@ -1,0 +1,7 @@
+/* Contenedor con margen superior para la tabla */
+.datatable-container {
+    margin-top: 20px;
+    /* Ajusta este valor según el espacio que desees */
+    padding: 10px;
+    /* Opcional: Agrega un poco de padding para que se vea más espaciado */
+}
