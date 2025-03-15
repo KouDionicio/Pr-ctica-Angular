@@ -1,20 +1,83 @@
-.datatable-container {
+/* Contenedor principal */
+.tablas-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Título de la vista */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenedor para los botones de las opciones */
+.tablas-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones de selección de tabla */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en los botones */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo cuando el botón está activo */
+button.active {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Estilo para las tablas */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
+/* Estilo de las celdas y cabeceras de la tabla */
 th,
 td {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
+/* Fondo de la cabecera */
 th {
     background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Estilo para las filas */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efecto hover sobre las filas */
+tr:hover {
+    background-color: #f1f1f1;
 }

@@ -1,4 +1,23 @@
-<div class="datatable-container">
-  <app-basic-datatable></app-basic-datatable>
-  <app-anime-datatable></app-anime-datatable>
+<div class="tablas-container">
+  <h1>Tablas</h1>
+
+  <div class="tablas-options">
+    <button [class.active]="isActiveTab('basic')" (click)="setActiveTab('basic')">Tabla Básica</button>
+    <button [class.active]="isActiveTab('anime')" (click)="setActiveTab('anime')">Anime Tabla</button>
+    <button [class.active]="isActiveTab('json')" (click)="setActiveTab('json')">JSON Tabla</button>
+    <button [class.active]="isActiveTab('ajax')" (click)="setActiveTab('ajax')">AJAX Tabla</button>
+  </div>
+
+  <div *ngIf="activeTab === 'basic'">
+    <app-basic-datatable></app-basic-datatable>
+  </div>
+  <div *ngIf="activeTab === 'anime'">
+    <app-anime-datatable></app-anime-datatable>
+  </div>
+  <div *ngIf="activeTab === 'json'">
+    <app-json-datatable></app-json-datatable>
+  </div>
+  <div *ngIf="activeTab === 'ajax'">
+    <app-ajax-datatable></app-ajax-datatable>
+  </div>
 </div>
