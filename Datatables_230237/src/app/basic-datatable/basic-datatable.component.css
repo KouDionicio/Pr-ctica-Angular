@@ -1,145 +1,91 @@
-/* Estilo del contenedor de la tabla */
-.datatable-container {
-    margin-top: 30px; /* Espacio entre el título y la tabla */
-    padding: 10px;
-}
-
-/* Título */
-h2.table-title {
-    font-size: 30px; /* Tamaño de fuente más grande para el título */
-    font-weight: 600;
-    margin-bottom: 20px; /* Espacio debajo del título */
-    color: #3f51b5; /* Color principal para el título */
-    padding: 15px; /* Añadir algo de espacio alrededor del texto */
-    border-radius: 12px; /* Bordes redondeados como la tabla */
-    background: linear-gradient(145deg, #3f51b5, #2c387e); /* Degradado en el fondo */
-    color: white; /* Color blanco para el texto */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    text-align: center;
-    transition: all 0.3s ease-in-out; /* Transición suave al hacer hover */
-}
-
-/* Efecto hover en el título */
-h2.table-title:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño del título al pasar el cursor */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
-    cursor: pointer;
-}
-
-/* Resaltar parte del título (en tu caso 'Basic Datatable') */
-h2.table-title span {
-    color: #ffeb3b; /* Resaltar en un color dorado */
-    font-weight: bold; /* Hacerlo en negrita */
-}
-
 /* Estilos generales para la tabla */
-table {
+#basicTable {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #f4f6f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: #000000; /* Fondo negro sólido */
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
-/* Encabezados de la tabla */
-th {
-    background-color: #3f51b5;
-    color: #ffffff;
-    padding: 14px 20px;
-    text-align: left;
-    font-size: 16px;
+/* Encabezado de la tabla */
+#basicTable thead {
+    background: linear-gradient(135deg, #1e1e1e, #34495e); /* Gradiente de gris oscuro a azul oscuro */
+    color: #fff;
+}
+
+/* Estilo de las filas del cuerpo */
+#basicTable tbody {
+    background-color: #212121; /* Fondo de las filas en un gris oscuro */
+    color: #fff;
+}
+
+/* Estilo de las filas impares (zebra striping) */
+#basicTable tbody tr:nth-child(odd) {
+    background-color: #2c2f33; /* Gris más oscuro para filas impares */
+}
+
+#basicTable tbody tr:nth-child(even) {
+    background-color: #3c4347; /* Gris más claro para filas pares */
+}
+
+/* Efectos y sombras para las celdas */
+#basicTable tbody td {
+    padding: 12px 20px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 2px solid #5c6bc0;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Transición de color */
+}
+
+/* Efecto hover sobre las celdas */
+#basicTable tbody td:hover {
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3); /* Efecto de sombra rosa pastel */
+    transform: translateY(-5px); /* Elevar la celda */
+    background-color: rgba(255, 105, 180, 0.1); /* Fondo rosa pastel */
+    color: #ff79c6; /* Texto rosa pastel */
+}
+
+/* Colores de texto de las celdas */
+#basicTable tbody td:nth-child(4) {
+    color: #ff79c6; /* Rosa pastel para Zodiac Sign */
+}
+
+#basicTable tbody td:nth-child(2) {
     font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #ffffff;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #82b1ff; /* Azul pastel para Name */
 }
 
-/* Celdas de la tabla */
-td {
-    padding: 16px 20px;
-    text-align: left;
-    font-size: 14px;
-    color: #333;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    border-left: 1px solid #e0e0e0;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+#basicTable tbody td:nth-child(3) {
+    font-weight: 600;
+    color: #82b1ff; /* Azul pastel para Last Name */
 }
 
-/* Filas alternas con color suave */
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Efecto hover sobre las filas */
-tbody tr:hover {
-    background-color: #e8eaf6;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Celdas con bordes redondeados */
-td,
-th {
-    border-radius: 8px;
-}
-
-/* Sombra sutil en la tabla */
-table.datatable.hover tbody tr:hover {
-    background-color: #e8eaf6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para la tabla cuando está cargando */
-table.datatable {
-    display: block;
-    overflow-x: auto;
+/* Sombra en la tabla */
+#basicTable {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
 }
 
-/* Estilo para la primera columna (ID) */
-td:first-child,
-th:first-child {
-    font-weight: bold;
-    color: #3f51b5;
+/* Efecto de las celdas cuando el ratón pasa sobre ellas */
+#basicTable tbody td:hover {
+    color: #ff79c6; /* Rosa pastel */
+    background-color: rgba(255, 105, 180, 0.1); /* Rosa pastel al pasar el mouse */
 }
 
-/* Última fila sin borde inferior */
-tbody tr:last-child td {
-    border-bottom: none;
-}
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    #basicTable {
+        font-size: 12px;
+    }
 
-/* Efecto para las celdas cuando se pasa el cursor */
-td:hover,
-th:hover {
-    background-color: #c5cae9;
-    color: #333;
-    transform: scale(1.05);
-}
-
-/* Alineación y estilo de las celdas */
-td,
-th {
-    padding: 14px 20px;
-    text-align: center;
-    vertical-align: middle;
-    border-left: 1px solid #e0e0e0;
-    border-top: 1px solid #e0e0e0;
-}
-
-/* Diseño de borde para las filas */
-tbody tr {
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s ease;
-}
-
-tbody tr:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    #basicTable thead th,
+    #basicTable tbody td {
+        padding: 8px 10px;
+    }
 }
