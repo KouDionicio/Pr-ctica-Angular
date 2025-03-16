@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { DataTablesModule } from 'angular-datatables';  // Importar el módulo de DataTables
+import { DataTablesModule } from 'angular-datatables';  
 
 @Component({
   selector: 'app-basic-datatable',
-  standalone: true,  // Marcamos el componente como standalone
-  imports: [DataTablesModule],  // Importamos los módulos necesarios
+  standalone: true,  
+  imports: [DataTablesModule],  
   templateUrl: './basic-datatable.component.html',
   styleUrls: ['./basic-datatable.component.css']
 })
 export class BasicDatatableComponent {
-  // No necesitamos ninguna lógica aquí, ya que DataTables se encargará de todo
+  
 }
