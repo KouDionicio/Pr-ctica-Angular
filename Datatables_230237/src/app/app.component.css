@@ -3,20 +3,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 30px; /* Reducir padding superior e inferior para acercar los elementos */
-    background: linear-gradient(135deg, #6b7f94, #4e5b6e); /* Fondo degradado en el contenedor */
+    padding: 15px 30px;
+    /* Reducir padding superior e inferior para acercar los elementos */
+    background: linear-gradient(135deg, #6b7f94, #4e5b6e);
+    /* Fondo degradado en el contenedor */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-    justify-content: flex-start; /* Alinea los elementos más arriba */
-    overflow: hidden; /* Elimina el scrollball */
+    min-height: 100vh;
+    /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    justify-content: flex-start;
+    /* Alinea los elementos más arriba */
+    overflow: hidden;
+    /* Elimina el scrollball */
 }
 
 /* Título de la vista */
 h1 {
     font-size: 2rem;
     color: #fff;
-    margin-bottom: 15px; /* Reducir el margen inferior para que esté más cerca de las opciones */
+    margin-bottom: 15px;
+    /* Reducir el margen inferior para que esté más cerca de las opciones */
     text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -26,7 +32,8 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px; /* Espacio entre las opciones */
+    margin-bottom: 20px;
+    /* Espacio entre las opciones */
 }
 
 /* Estilo para los botones de selección de tabla */
@@ -46,22 +53,30 @@ button {
 /* Efecto hover en los botones */
 button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px); /* Efecto de elevación */
+    transform: translateY(-3px);
+    /* Efecto de elevación */
 }
 
 /* Estilo cuando el botón está activo (clic) */
 button:active {
-    background-color: #6a4c93; /* Púrpura suave al hacer clic */
-    transform: translateY(0px); /* Efecto de "presionado" (sin elevación) */
-    box-shadow: 0 4px 10px rgba(106, 76, 147, 0.3); /* Sombra morada suave cuando está presionado */
+    background-color: #6a4c93;
+    /* Púrpura suave al hacer clic */
+    transform: translateY(0px);
+    /* Efecto de "presionado" (sin elevación) */
+    box-shadow: 0 4px 10px rgba(106, 76, 147, 0.3);
+    /* Sombra morada suave cuando está presionado */
 }
 
 /* Estilo cuando el botón está activado (opción seleccionada) */
 button.active {
-    background-color: #5c6bc0; /* Azul pastel para el estado seleccionado */
-    border-color: #5c6bc0; /* Borde azul pastel */
-    transform: translateY(-3px); /* Efecto de elevación */
-    box-shadow: 0 4px 15px rgba(92, 107, 192, 0.4); /* Sombra azul más suave cuando está activo */
+    background-color: #5c6bc0;
+    /* Azul pastel para el estado seleccionado */
+    border-color: #5c6bc0;
+    /* Borde azul pastel */
+    transform: translateY(-3px);
+    /* Efecto de elevación */
+    box-shadow: 0 4px 15px rgba(92, 107, 192, 0.4);
+    /* Sombra azul más suave cuando está activo */
 }
 
 
@@ -71,9 +86,11 @@ button.active {
     margin-top: 30px;
     padding: 20px;
     border-radius: 15px;
-    background: linear-gradient(135deg, #4e5b6e, #6b7f94); /* Gradiente de fondo dentro de las tablas */
+    background: linear-gradient(135deg, #4e5b6e, #6b7f94);
+    /* Gradiente de fondo dentro de las tablas */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Elimina el scrollball */
+    overflow: hidden;
+    /* Elimina el scrollball */
 }
 
 /* Estilo general de la tabla */
@@ -91,7 +108,8 @@ button.active {
 
 /* Encabezado de la tabla */
 #dataTable thead {
-    background: linear-gradient(135deg, #4e5b6e, #6b7f94); /* Gradiente de fondo más claro */
+    background: linear-gradient(135deg, #4e5b6e, #6b7f94);
+    /* Gradiente de fondo más claro */
     color: #fff;
     font-weight: bold;
 }
@@ -126,23 +144,27 @@ button.active {
 #dataTable tbody td:hover {
     box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
     transform: translateY(-5px);
-    background-color: rgba(255, 105, 180, 0.1); /* Rosa pastel */
+    background-color: rgba(255, 105, 180, 0.1);
+    /* Rosa pastel */
     color: #ff79c6;
 }
 
 /* Colores de texto de las celdas específicas */
 #dataTable tbody td:nth-child(4),
 #dataTable tbody td:nth-child(6) {
-    color: #ff79c6; /* Rosa pastel */
+    color: #ff79c6;
+    /* Rosa pastel */
 }
 
 #dataTable tbody td:nth-child(2) {
     font-weight: 600;
-    color: #82b1ff; /* Azul pastel */
+    color: #82b1ff;
+    /* Azul pastel */
 }
 
 #dataTable tbody td:nth-child(8) {
-    color: #a5d6a7; /* Verde pastel */
+    color: #a5d6a7;
+    /* Verde pastel */
     font-weight: bold;
 }
 
@@ -173,4 +195,51 @@ button.active {
         font-size: 0.9rem;
         padding: 10px 15px;
     }
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos de los campos del formulario */
+form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Estilo para el botón de envío */
+form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para cuando el formulario está visible */
+.tablas-content {
+    margin-top: 20px;
 }

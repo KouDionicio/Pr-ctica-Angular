@@ -6,11 +6,31 @@
     <button [class.active]="isActiveTab('anime')" (click)="setActiveTab('anime')">Anime Tabla</button>
     <button [class.active]="isActiveTab('json')" (click)="setActiveTab('json')">JSON Tabla</button>
     <button [class.active]="isActiveTab('ajax')" (click)="setActiveTab('ajax')">AJAX Tabla</button>
+    <!-- Botón para mostrar u ocultar el formulario de registro -->
+    <button (click)="toggleFormVisibility()">Registrar</button>
   </div>
 
-  
+  <!-- Formulario de registro -->
+  <!--<div *ngIf="isFormVisible" class="form-container">
+    <h2>Formulario de Registro</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" [(ngModel)]="formData.nombre" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" [(ngModel)]="formData.email" required />
+      </div>
+      <div>
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" name="telefono" [(ngModel)]="formData.telefono" required />
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>-->
+
   <div class="tablas-content">
-    
     <div *ngIf="activeTab === 'basic'">
       <app-basic-datatable></app-basic-datatable>
     </div>
@@ -24,5 +44,4 @@
       <app-ajax-datatable></app-ajax-datatable>
     </div>
   </div>
-
 </div>

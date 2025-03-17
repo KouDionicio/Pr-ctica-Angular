@@ -14,10 +14,9 @@ export class JsonDatatableComponent {
   constructor() {}
 
   ngOnInit(): void {
-    // Extraemos los datos de la tabla HTML después de que la vista esté cargada.
     const tableRows = document.querySelectorAll('#mangaTable tbody tr');
 
-    // Recorremos todas las filas y extraemos los datos de las celdas.
+    
     tableRows.forEach(row => {
       const cells = row.querySelectorAll('td');
       const mangaData = {
@@ -34,7 +33,7 @@ export class JsonDatatableComponent {
       this.jsonData.push(mangaData);
     });
 
-    // Verificamos los datos JSON extraídos
+    
     console.log('Datos extraídos en formato JSON:', this.jsonData);
   }
 }
